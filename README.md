@@ -35,6 +35,7 @@ Metodo: GET
 URL: /product
 Metodo: POST
 Entrada:
+```sql
 {
     "name": "Jabon Deluxe",
     "reference": "RF679898",
@@ -43,12 +44,14 @@ Entrada:
     "category": "Cuidado personal",
     "stock": "3000"
 }
+```
 
 4. Modificar un producto
 
 URL: /product/{id}
 Metodo: PUT
 Entrada:
+```json
 {
     "name": "Jabon Deluxe 2",
     "reference": "RF6798982",
@@ -57,6 +60,7 @@ Entrada:
     "category": "Cuidado personal",
     "stock": "2000"
 }
+```
 
 5. Eliminar un producto
 

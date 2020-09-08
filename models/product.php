@@ -2,6 +2,7 @@
 
 class Product {
 
+    public $id;
     public $name;
     public $reference;
     public $price;
@@ -12,6 +13,7 @@ class Product {
     public $last_selled_at;
 
     function __construct($dto){
+        $this->id = $dto['id'];
         $this->name = $dto['name'];
         $this->reference = $dto['reference'];
         $this->price = $dto['price'];

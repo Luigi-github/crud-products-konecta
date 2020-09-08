@@ -7,12 +7,14 @@
 	header("Access-Control-Allow-Headers: X-Requested-With");
 	header('Content-Type: text/html; charset=utf-8');
 
+	// Cargar librerias
     require 'libs/database.php';
     require 'libs/model.php';
     require 'libs/controller.php';
     require 'libs/view.php';
     require 'libs/app.php';
 
+    // Cargar configuraciones
     require 'config/config.php';
     
     $app = new App();

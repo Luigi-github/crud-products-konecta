@@ -3,6 +3,7 @@ Crud maestro stock de productos en php
 
 # Base de datos
 
+```sql
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -13,10 +14,15 @@ CREATE TABLE `products` (
   `category` VARCHAR(255) NOT NULL,
   `stock` INT NOT NULL,
   `created_at` DATE NOT NULL,
-  `last_selled_at` DATE NULL,
+  `last_selled_at` DATETIME NULL,
 
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
+
+# Configuración DB
+
+Ir al archivo **config/config.php** y registrar las credenciales de la DB.
 
 # Documentación API
 
@@ -35,7 +41,7 @@ Metodo: GET
 URL: /product
 Metodo: POST
 Entrada:
-```sql
+```json
 {
     "name": "Jabon Deluxe",
     "reference": "RF679898",
@@ -66,3 +72,14 @@ Entrada:
 
 URL: /product/{id}
 Metodo: DELETE
+
+6. Realizar la venta de un producto
+
+URL: /invoice
+Metodo: POST
+Entrada:
+```json
+{
+    "product_id": 4
+}
+```
